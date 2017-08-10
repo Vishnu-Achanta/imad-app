@@ -20,7 +20,7 @@ var article = {
             content: ' Sorry I do not have any article right now',
         },
 
-        'article_three' : {
+        article_three : {
             title: 'Article Three | Vishnu',
             heading: 'Article-Three',
             date: '10/8/2017',
