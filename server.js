@@ -5,20 +5,74 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+var article_one = {
+    title: 'Article One | Vishnu',
+    heading: 'Article-One',
+    date: '10/8/2017',
+    content: ' Sorry I do not have any article right now',
+};
+
+var article_two = {
+    title: 'Article Two | Vishnu',
+    heading: 'Article-Two',
+    date: '10/8/2017',
+    content: ' Sorry I do not have any article right now',
+};
+
+var article_three = {
+    title: 'Article Three | Vishnu',
+    heading: 'Article-One',
+    date: '10/8/2017',
+    content: ' Sorry I do not have any article right now',
+};
+
+function CreateTemplate (data){
+    var title = data.title;
+    var heading = data.heading;
+    var date = data.date;
+    var content = data.content;
+var htmlTemplate = `
+    <html>
+    <head>
+    <title> ${title} </title>
+        <link href="/ui/style.css" rel="stylesheet" />
+        <meta name ="viewportcontent = "width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <div class="container" >
+            <div> 
+                <a href="/"> Home </a>
+            </div>
+            <h4>           
+                <div> 
+                    ${heading}
+                </div>
+            </h4>
+            <h3>
+                ${date}
+            </h3>
+            <h2> ${content} </h2>
+        </div>
+    </body>
+</html>
+`;
+return htmlTemplate;
+}
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
 app.get('/article-one.html', function (req, res) {
- res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
+ res.send(CreateTemplate(article_one));
 });
 
-app.get('/article-2', function (req, res) {
-  res.send('article 2 requested');
+app.get('/article-two.html', function (req, res) {
+ res.send(CreateTemplate(article_two));
 });
 
-app.get('/article-3', function (req, res) {
-  res.send('article 3 requested');
+app.get('/article-three.html', function (req, res) {
+ res.send(CreateTemplate(article_three));
 });
 
 app.get('/ui/style.css', function (req, res) {
