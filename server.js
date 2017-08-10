@@ -66,15 +66,15 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/article-one.html', function (req, res) {
+app.get('/article_one.html', function (req, res) {
  res.send(CreateTemplate(article_one));
 });
 
-app.get('/article-2.html', function (req, res) {
+app.get('/article_two.html', function (req, res) {
  res.send(CreateTemplate(article_two));
 });
 
-app.get('/article-3.html', function (req, res) {
+app.get('/article_three.html', function (req, res) {
  res.send(CreateTemplate(article_three));
 });
 
