@@ -70,11 +70,11 @@ app.get('/article-one.html', function (req, res) {
  res.send(CreateTemplate(article_one));
 });
 
-app.get('/article-two.html', function (req, res) {
+app.get('/article-2.html', function (req, res) {
  res.send(CreateTemplate(article_two));
 });
 
-app.get('/article-three.html', function (req, res) {
+app.get('/article-3.html', function (req, res) {
  res.send(CreateTemplate(article_three));
 });
 
