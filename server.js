@@ -22,7 +22,7 @@ var article= {
 
         article_three: {
             title: 'Article Three | Vishnu',
-            heading: 'Article-One',
+            heading: 'Article-Three',
             date: '10/8/2017',
             content: ' Sorry I do not have any article right now',
         },
