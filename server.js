@@ -29,6 +29,13 @@ var article = {
 
 };
 
+var counter=0;
+app.get('/counter', function (req, res) {
+    counter = counter +1;
+  res.send(counter.toString());
+});
+
+
 function CreateTemplate (data){
     var title = data.title;
     var heading = data.heading;
