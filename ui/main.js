@@ -31,12 +31,15 @@ submit.onclick = function(){
    // capture and render
    var names = ['name1','name2','name3'];
    var list='';
+   console.log('before for');
    for(var i=0; i< names.lenght; i++){
        console.log('for');
        list += '<li>' + names[i] + '</li>';
    }
+   console.log('after for');
    var namelist = document.getElementById('namelist');
    namelist.innerHTML= list;
+   console.log('list');
 };
 
 
