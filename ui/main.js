@@ -42,7 +42,7 @@ submit.onclick = function(){
     }
   };
   
-  request.open('GET', 'http://ee150002001.imad.hasura-app.io/submit?name=' , true);
+  request.open('GET', 'http://ee150002001.imad.hasura-app.io/submit?name='+name , true);
   request.send('null');
 };
    // capture and render
