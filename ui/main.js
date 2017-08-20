@@ -25,7 +25,7 @@ var nameInput = document.getElementById('name');
 var name = nameInput.value;
 var submit = document.getElementById('sbt_btn');
 submit.onclick = function(){
-    console.log('for');
+    console.log('hi');
    //make rquest
    
    // capture and render
