@@ -32,7 +32,7 @@ submit.onclick = function(){
    var names = ['name1','name2','name3'];
    var list='';
    console.log('before for');
-   for(var i=0; i< names.lenght; i++){
+   for(var i=0; i< names.length; i++){
        console.log('for');
        list += '<li>' + names[i] + '</li>';
    }
