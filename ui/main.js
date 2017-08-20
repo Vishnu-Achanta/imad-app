@@ -21,8 +21,7 @@ button.onclick = function() {
   request.send('null');
 };
 
-var nameInput = document.getElementById('name');
-var name = nameInput.value;
+
 var submit = document.getElementById('sbt_btn');
 submit.onclick = function(){
    //make rquest
@@ -31,7 +30,8 @@ submit.onclick = function(){
   request.onreadystatechange = function(){
     if(request.readystate === XMLHttpRequest.done){
         if(request.status === 200){
-            var names = ['name1','name2','name3'];
+            var names = request.responseText;
+            names= JSON.parse(names);
             var list='';
             for(var i=0; i< names.length; i++){
                 list += '<li>' + names[i] + '</li>';
@@ -41,7 +41,8 @@ submit.onclick = function(){
         }
     }
   };
-  
+    var nameInput = document.getElementById('name');
+    var name = nameInput.value;
   request.open('GET', 'http://ee150002001.imad.hasura-app.io/submit?name='+name , true);
   request.send('null');
 };
