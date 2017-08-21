@@ -94,7 +94,6 @@ app.get('/test-db', function (req, res) {
            res.send(JSON.stringify(result.rows));
        }
     });
-  
 }); 
 
 var names=[];
@@ -107,7 +106,7 @@ app.get('/submit', function (req, res) {
 
 app.get('/articles/:articleName', function (req, res) {
      console.log('hey 2');
-    pool.query("SELECT * FROM article WHERE title ='",+ req.params.articleName+"'", function(err, result){
+    pool.query("SELECT * FROM article WHERE title = $1", [req.params.articleName] , function (err, result) {
         console.log('hey 1');
        if(err){
            res.status(500).send(err.toString());
