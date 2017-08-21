@@ -5,7 +5,7 @@ var Pool = require('pg');
 
 var config = {
     user: 'ee150002001',
-    database: 'ee15002001',
+    database: 'ee150002001',
     host: 'db.imad.hasura.io',
     port: '5432',
     password: process.env.DB_PASSWORD
